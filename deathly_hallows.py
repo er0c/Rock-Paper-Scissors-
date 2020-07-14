@@ -14,6 +14,8 @@ print("Ready set go!")
 userChoice = ""
 playerChoice = ""
 gameResults = ""
+player_cnt = 0
+opponent_cnt = 0
 
 # Generate the computer's choice
 playerValue = randint(1, 3)
@@ -41,13 +43,15 @@ print("You chose: " + userChoice)
 if ((playerChoice == "stone" and userChoice == "stone") or (playerChoice == "cloak" and userChoice == "cloak") or (playerChoice == "wand" and userChoice == "wand")):
   gameResults = "It's a tie!"   	
 
-# Player will win
+# User will win
 elif ((playerChoice == "stone" and userChoice == "cloak") or (playerChoice == "cloak" and userChoice == "wand") or (playerChoice == "wand" and userChoice == "stone")):
   gameResults = "You win!"
+  player_cnt += 1
 
-# Opponent will win
+# Player will win
 elif ((playerChoice == "stone" and userChoice == "wand") or (playerChoice == "cloak" and userChoice == "stone") or (playerChoice == "wand" and userChoice == "cloak")):
   gameResults = "Computer wins!"
+  opponent_cnt += 1
 
 # Display the results to the player
 print(gameResults)
