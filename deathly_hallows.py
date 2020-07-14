@@ -50,8 +50,8 @@ elif ((playerChoice == "stone" and userChoice == "cloak") or (playerChoice == "c
 
 # Player will win
 elif ((playerChoice == "stone" and userChoice == "wand") or (playerChoice == "cloak" and userChoice == "stone") or (playerChoice == "wand" and userChoice == "cloak")):
-  gameResults = "Computer wins!"
+  gameResults = player + " wins!"
   opponent_cnt += 1
 
-# Display the results to the player
+# Display the results to the user
 print(gameResults)
