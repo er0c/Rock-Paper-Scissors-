@@ -5,7 +5,7 @@ from random import randint
 
 # Introduction
 print("Welcome to the Stone, Cloak, Wand Game!")
-name = input("What's your name? ")
+user = input("What's your name? ")
 player = input("Who in the Harry Potter world do you want to be your opponent? ")
 print("Cool! " + player + " will be your opponent & you will be entering your selection of stone, cloak, or wand. :)")
 print("Ready set go!")
@@ -17,7 +17,7 @@ gameResults = ""
 player_cnt = 0
 opponent_cnt = 0
 
-# Generate the computer's choice
+# Generate the player's choice
 playerValue = randint(1, 3)
 if (playerValue == 1):
     playerChoice = "stone"
@@ -26,7 +26,7 @@ elif (playerValue == 2):
 elif (playerValue == 3):
     playerChoice = "wand"
 
-# Get player's choice 
+# Get user's choice 
 userChoice = input("Enter Stone, Cloak, or Wand: ")
 userChoice = userChoice.lower()
 
@@ -35,7 +35,7 @@ while(userChoice != 'stone' and userChoice != 'cloak' and userChoice != 'wand'):
   userChoice = input("Enter Stone, Cloak, or Wand: ")
   userChoice = userChoice.lower()
 
-# Show the player the selections
+# Show the user the selections
 print(player + " chose: " + playerChoice)
 print("You chose: " + userChoice)
 
